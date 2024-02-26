@@ -1,0 +1,21 @@
+<div class="input-group mb-3">
+    <span class="input-group-text" id="basic-addon1">Title</span>
+    <input type="text" #tTitle class="form-control" aria-label="Username" aria-describedby="basic-addon1">
+  </div>
+
+  <div class="input-group mb-3">
+    <span class="input-group-text" id="basic-addon1">Author</span>
+    <input type="text" #tAuthor class="form-control" aria-label="Username" aria-describedby="basic-addon1">
+  </div>
+
+  <div class="input-group mb-3">
+    <span class="input-group-text" id="basic-addon1">Price</span>
+    <input type="text" #tPrice class="form-control" aria-label="Username" aria-describedby="basic-addon1">
+  </div>
+
+  <div class="input-group mb-3">
+    <span class="input-group-text" id="basic-addon1">Page Size</span>
+    <input type="text" #tPageSize class="form-control" aria-label="Username" aria-describedby="basic-addon1">
+  </div>
+
+  <input type="button" class="btn btn-outline-secondary" value="Add Book" (click)="addBook(tTitle.value,tAuthor.value,tPrice.value,tPageSize.value)" >

@@ -1,0 +1,35 @@
+<table  class="table table-bordered table-striped">
+    <thead>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Price</th>
+        <th>Page Size</th>
+        <th>Status</th>
+        <th>Action</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let book of bookList">
+            <td>{{book.title}}</td>
+            <td>{{book.author}}</td>
+            <td>${{book.price}}</td>
+            <td>{{book.pageSize}}</td>
+            <td>
+
+                {{book.isRead==true?'Done':'Not Yet'}}
+
+                <!-- <span *ngIf="book.isRead==true">
+                    Done..!
+                </span>
+                <span *ngIf="book.isRead==false">
+                    Not Yet
+                </span> -->
+            
+            
+            </td>
+            <td>
+                <input type="button" (click)="toogle(book)" value="{{book.isRead?'Cancel':'Finish Him!'}}">
+            </td>
+    
+        </tr>
+    </tbody>
+</table>
